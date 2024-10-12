@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator by Vano K.</title>
+    <link rel="icon" href=".shared/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/calculator.css">
+    <link rel="stylesheet" href="./styles/particles.css">
+</head>
+<body>
+    <!-- Theme toggle button -->
+    <button id="theme-toggle" class="theme-toggle">☀</button>
+
+    <audio id="click-sound" src="./shared/click.mp3" preload="auto"></audio>
+    
+    <!-- Logo at the top left -->
+    <div class="logo-container">
+        <a href="./index.html">
+            <img src="./shared/Logo.png" alt="Main Page">
+        </a>
+    </div>
+
+    <!-- Main container for the calculator -->
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="header">
+                <h1 style="display: inline;">Simple Calculator</h1>
+                <h3 style="display: inline; margin-left: 111px;">16 Digits</h3>
+            </div>
+
+            <!-- Display for outputting values -->
+            <input type="text" id="display" disabled>
+
+            <!-- Memory buttons -->
+            <div class="memory-buttons">
+                <button onclick="memoryClear()">MC</button>
+                <button onclick="memoryRecall()">MR</button>
+                <button onclick="memoryAdd()">M+</button>
+                <button onclick="memorySubtract()">M-</button>
+            </div>
+
+            <!-- Main buttons -->
+            <div class="buttons">
+                <button onclick="memorySave()">MS</button>
+                <button onclick="power()">n^</button>
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="clearEntry()">CE</button>
+                <button onclick="appendToDisplay('%')">%</button>
+                <button onclick="inverse()">1/x</button>
+                <button onclick="square()">x²</button>
+                <button onclick="deleteLast()">Del</button>
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button onclick="appendToDisplay('+')">+</button>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button onclick="appendToDisplay('x')">x</button>
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button onclick="appendToDisplay('-')">-</button>
+                <button onclick="changeSign()">+/-</button>
+                <button onclick="appendToDisplay('0')">0</button>
+                <button onclick="appendToDisplay(',')">,</button>
+                <button onclick="appendToDisplay('÷')">÷</button>
+                <button class="equals" onclick="calculate()">=</button>
+            </div>
+
+            <h2>Created by Vano Khachatrian</h2>
+        </div>
+    </div>
+
+    <!-- CodePen button at the bottom -->
+    <div class="footer">
+        <a href="https://codepen.io/vanylix-game/pen/KKOagpZ" target="_blank">
+            <img src="./shared/Codepen-light.png" alt="CodePen Project" class="footer-icon">
+        </a>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+    <script src="./styles/Theme.js"></script>
+</body>
+</html>
+
