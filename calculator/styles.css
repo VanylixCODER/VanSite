@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'Digital7';
+    src: url('../shared/calculator.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'orbitron';
+    src: url(../shared/Orbitron.ttf) format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Light theme styles */
+body.light {
+    background-color: #f4f4f4; /* Light background */
+    color: #333; /* Dark text */
+}
+
+/* Dark theme styles */
+body.dark {
+    background-color: #222; /* Dark background */
+    color: #f4f4f4; /* Light text */
+}
+
+/* Logo at the top left */
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.logo-container img {
+    padding-left: 50px;
+    padding-top: 10px;
+    width: 249px; /* Logo size */
+    height: auto;
+    cursor: pointer;
+}
+
+/* Calculator display */
+#display {
+    width: 100%;
+    height: 100px; /* Increased height of the display */
+    font-size: 54px; /* Increased font size */
+    font-family: 'Digital7', sans-serif;
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #222;
+    color: #2bff00;
+    border-radius: 5px;
+}
+
+/* CodePen button at the bottom */
+.footer {
+    position: fixed; /* Fix the footer at the bottom */
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-icon {
+    padding-top: 10px;
+    width: auto;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.footer-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Titles */
+h1 {
+    font-size: 25px;
+    font-family: 'orbitron', sans-serif;
+    color: #fff;
+    align-text: center;
+}
+
+h2 {
+    font-size: 8px;
+    color: #fff;
+    align-text: center;
+    padding-top: 10px;
+}
+
+h3 {
+    font-size: 15px;
+    color: #ff9500;
+    text-align: right;
+    padding-top: 20px;
+}
+
+/* Main style for the calculator */
+.calculator {
+    width: 500px;
+    padding: 30px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Main buttons */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+button:active {
+    background-color: #666;
+}
+
+button:nth-child(4n) {
+    background-color: #ff9500;
+}
+
+button:nth-child(4n):hover {
+    background-color: #ffb366;
+}
+
+button:nth-child(4n):active {
+    background-color: #ffcc80;
+}
+
+/* Style for the = button */
+.equals {
+    grid-column: span 4;
+    background-color: #ff9500;
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.equals:hover {
+    background-color: #e67e22;
+}
+
+/* Memory buttons */
+.memory-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.memory-buttons button {
+    flex: 1;
+    margin-right: 5px;
+    background-color: #ff7300;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.memory-buttons button:last-child {
+    margin-right: 0;
+}
+
+.memory-buttons button:hover {
+    background-color: #ffb366;
+}
+
+.memory-buttons button:active {
+    background-color: #ffcc80;
+}
+
+/* Theme toggle button styles */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    font-size: 20px;
+    padding: 0px;
+    right: 20px;
+    width: 40px; /* Width of the button */
+    height: 40px; /* Height of the button */
+    background-color: #ff9500; /* Button color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 50%; /* Make the button round */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.theme-toggle:hover {
+    background-color: #e68a00; /* Darken button on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
