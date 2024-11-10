@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url("./flappybirdbg.png");
+        }
+
+        #board {
+            display: block;
+            background-color: transparent; /* Transparent background */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="board"></canvas>
+    <script src="flappybird.js"></script>
+</body>
+</html>
